@@ -26,13 +26,35 @@ PyInstaller can be used to create standalone executables. **Important**: You mus
 
 ### Building Instructions
 
-The process is the same for all platforms, but must be run on the target platform:
+#### Option 1: Using the Build Script (Recommended)
+
+A build script is provided that automatically detects your operating system and builds the appropriate executable:
+
+```bash
+# On Linux/macOS:
+./build.sh
+
+# On Windows (in Command Prompt):
+bash build.sh  # If using Git Bash or similar
+# OR
+.\build.sh    # If using WSL or Cygwin
+```
+
+The script will:
+1. Detect your operating system
+2. Install required dependencies (pygame and PyInstaller)
+3. Clean any previous builds
+4. Create an executable for your platform
+
+#### Option 2: Manual Build
+
+If you prefer to build manually, you can use PyInstaller directly:
 
 ```bash
 # On Linux/macOS:
 pyinstaller --onefile pong.py
 
-# On Windows (run in Command Prompt):
+# On Windows (in Command Prompt):
 pyinstaller --onefile pong.py
 ```
 
