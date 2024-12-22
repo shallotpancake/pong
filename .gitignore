@@ -17,4 +17,6 @@ env/
 .vscode/
 .idea/
 *.swp
-*.swo
+
+# Logs
+*.log
